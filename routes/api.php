@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\CommentController;
+use App\Http\Controllers\Api\LikeController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Middleware\CheckIsAdmin;
 use App\Http\Middleware\CheckIsUser;
@@ -16,6 +18,7 @@ Route::get('/user', function (Request $request) {
 
 Route::post('auth/register', [AuthController::class, 'register']);
 Route::post('auth/login', [AuthController::class, 'login']);
+// Route::get('/post/{id}/comments', [CommentController::class, 'index']);
 
 Route::get('/post', [PostController::class, 'index']);
 Route::get('/post/{id}', [PostController::class, 'show']);
@@ -38,6 +41,14 @@ Route::middleware('auth:sanctum')->group(function() {
         Route::post('/post', [PostController::class, 'store']);
         Route::put('/post/{id}', [PostController::class, 'update']);
         Route::delete('/post/{id}', [PostController::class, 'destroy']);
+        Route::post('/comment', [CommentController::class, 'store']);
+        Route::put('/comment/{id}', [CommentController::class, 'update']);
+        Route::delete('/comment/{id}', [CommentController::class, 'destroy']);
+        Route::post('/comment/{id}/like', [LikeController::class, 'store']);
+        Route::post('/comment/{id}/like', [LikeController::class, 'store']);
+        Route::delete('/comment/{id}/unlike', [LikeController::class, 'destroy']);
+Route::get('/post/{id}/comments', [LikeController::class, 'index']);
+
     });
 
 });
