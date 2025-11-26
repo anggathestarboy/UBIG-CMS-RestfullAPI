@@ -1,0 +1,104 @@
+
+.page-container {
+    margin-left: 270px;       
+    padding: 30px;
+    background: #f6f7fb;
+    min-height: 100vh;
+}
+
+/* Judul Halaman */
+.page-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Garis Halus */
+.page-container hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+/* ====================== */
+/* BUTTON CREATE */
+/* ====================== */
+.create-btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.create-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ====================== */
+/* TABEL */
+/* ====================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+th {
+    background: #f1f5f9;
+    padding: 14px;
+    text-align: left;
+    font-weight: bold;
+    color: #4b5563;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #374151;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+/* ====================== */
+/* BUTTON ACTION */
+/* ====================== */
+
+.btn-edit {
+    background: #fbbf24;
+    color: black;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-edit:hover {
+    background: #f59e0b;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background: #dc2626;
+}
