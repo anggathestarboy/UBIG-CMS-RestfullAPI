@@ -76,7 +76,7 @@ class LikeController extends Controller
             return response()->json([
                 "message"=>" already liked this comment."
 
-            ]);
+            ], 409);
         }
 
     }

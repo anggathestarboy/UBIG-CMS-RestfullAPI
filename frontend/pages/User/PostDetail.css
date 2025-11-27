@@ -1,0 +1,155 @@
+
+.detail-page-container {
+    display: flex;
+    min-height: 100vh;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.detail-content {
+    padding: 40px 60px;
+    margin-left: 20%;
+    width: 70%;
+}
+
+.detail-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+
+.detail-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.detail-body {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    max-width: 95%;
+}
+
+.divider {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.comment-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+}
+
+
+
+.comment-form {
+    margin: 15px 0;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.comment-submit {
+    margin-top: 8px;
+    padding: 8px 14px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-submit:hover {
+    background: #0069d9;
+}
+
+
+.comment-list {
+    margin-top: 15px;
+}
+
+.comment-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.comment-text {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.comment-footer {
+    font-size: 13px;
+    color: #444;
+}
+
+
+.comment-item button {
+    padding: 5px 10px;
+    background: #e1e1e1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-item button:hover {
+    background: #d5d5d5;
+}
+
+
+.no-comment {
+    color: #666;
+    font-size: 14px;
+}
+
+
+.detail-body {
+    font-size: 15px;
+   
+    color: #333;
+
+
+    white-space: pre-line; /* agar teks dengan \n jadi paragraf */
+
+}
+
+
+
+.detail-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detail-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.divider {
+    margin: 30px 0;
+}

@@ -1,0 +1,113 @@
+.myposts-page {
+  display: flex;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* Content */
+.myposts-content {
+  margin-left: 270px;
+  padding: 30px;
+  width: 100%;
+}
+
+.myposts-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.myposts-divider {
+  margin-bottom: 25px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Posts container */
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Card */
+.post-card {
+  width: 90%;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px;
+  transition: 0.2s ease;
+}
+
+.post-card:hover {
+  background: #f0f0f0;
+}
+
+/* Card content */
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.post-snippet {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-detail,
+.btn-edit {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-detail {
+  background: #007bff;
+  color: white;
+}
+
+.btn-detail:hover {
+  background: #0068d6;
+}
+
+.btn-edit {
+  background: #ffc107;
+  color: #222;
+}
+
+.btn-edit:hover {
+  background: #e0ad06;
+}
+
+/* Empty message */
+.no-post-message {
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+  margin-top: 40px;
+}

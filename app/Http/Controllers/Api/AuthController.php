@@ -21,6 +21,7 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt( $data['password']),
+            'role' => "user"
         ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
@@ -30,7 +31,7 @@ class AuthController extends Controller
             'data' => [
                 'name' => $user->name,
                 'email' => $user->email,
-                'role' => $user->email,
+                'role' => $user->role,
                 'token' => $token,
                 'created_at' => $user->created_at
             ]
@@ -82,6 +83,12 @@ class AuthController extends Controller
     
    
 
+   }
+   
+   
+   
+   public function user() {
+    return response()->json(Auth::user());
    }
 
 }

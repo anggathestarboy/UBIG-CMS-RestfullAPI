@@ -3,7 +3,7 @@ import "./sidebar.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export const Sidebar = ({ title }) => {
+export const UserSidebar = ({ title }) => {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
@@ -34,25 +34,35 @@ export const Sidebar = ({ title }) => {
       <div className="cms-name">{cms_name}</div>
 
       <ul className="sidebar-list">
-        <Link style={{ textDecoration: "none" }} to={"/admin/dashboard"}>
+        <Link style={{ textDecoration: "none" }} to={"/user/dashboard"}>
           <li
             className={`sidebar-item ${
-              currentPath === "/admin/dashboard" ? "active" : ""
+              currentPath === "/user/dashboard" ? "active" : ""
             }`}
           >
             Dashboard
           </li>
         </Link>
-
-        <Link to={"/admin/category"} style={{ textDecoration: "none" }}>
+        <Link style={{ textDecoration: "none" }} to={"/user/homepage"}>
           <li
             className={`sidebar-item ${
-              currentPath === "/admin/category" ? "active" : ""
+              currentPath === "/user/homepage" ? "active" : ""
             }`}
           >
-            Categories
+            Homepage
           </li>
         </Link>
+        <Link style={{ textDecoration: "none" }} to={"/user/post"}>
+          <li
+            className={`sidebar-item ${
+              currentPath === "/user/post" ? "active" : ""
+            }`}
+          >
+            My Post
+          </li>
+        </Link>
+
+   
       </ul>
 
       <div className="logout-wrapper">

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import "./Register.css";
+import "./Admin/Register.css";
 
-const Register = () => {
+const Login = () => {
     const [form, setForm] = useState({
-        name: "",
+    
         email: "",
         password: "",
     });
@@ -25,33 +25,35 @@ const Register = () => {
 
         try {
             const res = await axios.post(
-                "http://127.0.0.1:8000/api/auth/register",
+                "http://127.0.0.1:8000/api/auth/login",
                 form
             );
 
             localStorage.setItem("token", res.data.data.token);
             localStorage.setItem("cms_name", res.data.data.name);
+            
+            if (res.data.data.role === "user") {
             navigate("/user/dashboard");
+                
+            }
+            
+            else {
+                 navigate("/admin/dashboard");
+            }
+           
         } catch (error) {
-            setError("Data Tidak Valid");
+            setError("Username atau Password salah");
         }
     };
 
     return (
         <div className="auth-container">
             <div className="auth-card">
-                <h2 className="auth-title">Create Account</h2>
+                <h2 className="auth-title">Login</h2>
                 <p className="auth-subtitle">Join our Blog CMS platform</p>
 
                 <form onSubmit={handleSubmit}>
-                    <label>Name</label>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        value={form.name}
-                        onChange={handleChange}
-                    />
+            
 
                     <label>Email</label>
                     <input
@@ -71,17 +73,17 @@ const Register = () => {
                         onChange={handleChange}
                     />
 
-                    <button type="submit" className="auth-btn">Register</button>
+                    <button type="submit" className="auth-btn">Login</button>
 
                     {error && <p className="auth-error">{error}</p>}
                 </form>
 
                 <p className="auth-footer">
-                    Already have an account? <Link to="/">Login here</Link>
+                    don't have an account? <Link to="/register">Register here</Link>
                 </p>
             </div>
         </div>
     );
 };
 
-export default Register;
+export default Login;

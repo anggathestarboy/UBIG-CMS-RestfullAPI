@@ -1,0 +1,107 @@
+
+.homepage-container {
+    display: flex;
+    background: #f5f7fb;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.post-wrapper {
+    width: 100%;
+    padding: 40px 60px;
+    margin-left: 20%;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+
+.search-box {
+    width: 260px;
+    padding: 10px 14px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: .2s;
+}
+
+.search-box:focus {
+    border-color: #007bff;
+}
+
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.post-card {
+    background: #fff;
+    padding: 20px 22px;
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+.category-badge {
+    background: #007bff;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    margin: 8px 0;
+}
+
+
+.excerpt {
+    color: #555;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+
+.author {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.readmore-btn {
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.readmore-btn:hover {
+    background: #0056b3;
+}

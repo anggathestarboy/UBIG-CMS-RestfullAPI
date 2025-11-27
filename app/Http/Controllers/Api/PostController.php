@@ -17,11 +17,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with(['user', 'category'])->get();
+        $posts = Post::with('user', 'category')->get();
          return response()->json([
-          
+         "post_count" => Post::count(),
+         
             'data' => [
                 $posts->map(function($post) {
+                    
 
 return [
 
@@ -197,6 +199,21 @@ return [
                 
 "message" => " Post has been deleted"
 
-            ], 403);
+            ]);
     }
+    
+    
+    public function myPosts()
+{
+    $userId = Auth::id();
+
+    $posts = Post::where('user_id', $userId)
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+    return response()->json([
+        "message" => "My posts",
+        "data" => $posts
+    ]);
+}
 }
